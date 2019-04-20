@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #e0531c;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	font-size: 10.5pt;
+	font-family: Arial, sans-serif;
+	color: #383939;
+	background-color: #eae3e0;
+}
+
+
+p {
+	padding: 10px;
+}
+
+#content {
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin: 20px;
+}
+
+
+#banner {
+	position: relative;
+	padding: 28px;
+	margin: 0;
+	background-color: #0C4F59;
+}
+
+#banner h1 {
+	color: #ffffff;	
+}
+
+/* Navigation bar */
+#nav li a#selected {
+	background-color: #0C4F59;
+	color: #ffffff;
+}
+
+#nav ul {
+	padding-left: 0;
+	margin-left: 0;
+	margin-bottom: 50px;
+	background-color: #D9DDDE;
+	color: #0C4F59;
+	float: left;
+	width: 100%;
+	font-family: arial, helvetica, sans-serif;
+}
+
+#nav ul li { 
+	display: inline;
+}
+
+#nav ul li a {
+	padding: 0.2em 1em;
+	background-color: #D9DDDE;
+	color: #0C4F59;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #fff;
+}
+
+#nav ul li a:hover {
+	background-color: #e0531c;
+	color: #fffff;
+}
+
+div#frontpage-image  {
+	width:auto;
+	float: left;
+	max-height:70%;
+	padding:20px
+}
+
+div#frontpage-bubble {
+	width:300px;
+	margin-left:310px;
+	margin-top:150px;
+	text-align:center;
+}
+
+/* Speech bubbles borrowed from: */
+/* ------------------------------------------
+PURE CSS SPEECH BUBBLES
+by Nicolas Gallagher
+- http://nicolasgallagher.com/pure-css-speech-bubbles/
+
+http://nicolasgallagher.com
+http://twitter.com/necolas
+
+Created: 02 March 2010
+Version: 1.2 (03 March 2011)
+
+Dual licensed under MIT and GNU GPLv2 � Nicolas Gallagher 
+------------------------------------------ */
+.triangle-isosceles {
+	position:relative;
+	padding:15px;
+	margin:1em 0 3em;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+.triangle-isosceles.left {
+	margin-left:50px;
+	background:#ffffff;
+}
+
+/* creates triangle */
+.triangle-isosceles:after {
+	content:"";
+	position:absolute;
+	bottom:-15px; /* value = - border-top-width - border-bottom-width */
+	left:50px; /* controls horizontal position */
+	border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+	border-style:solid;
+	border-color:#ffffff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+.triangle-isosceles.left:after {
+	top:16px; /* controls vertical position */
+	left:-50px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+	border-width:10px 50px 10px 0;
+	border-color:transparent #ffffff;
+}
