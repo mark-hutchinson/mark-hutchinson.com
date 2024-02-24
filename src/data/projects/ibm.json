@@ -1,0 +1,17 @@
+{
+  "title": "Rational Application Developer / Eclipse",
+  "slug": "ibm",
+  "company": "IBM Canada",
+  "dates": "June 2008 - August 2011",
+  "images" : [
+    {
+      "src": "img/projects/ibm.png",
+      "title": "IBM"
+    }
+  ],
+  "bullets" : [
+    "Java Development for IBM Rational Application Developer XML Web Services Tools",
+    "Contributor to open source Eclipse <a href=\"https://www.eclipse.org/webtools/\">WebTools Platform</a>",
+    "Technologies used: Java, SWT, XML Web Services (WSDL, SOAP etc), WebSphere Application Server, Apache Tomcat"
+  ]
+}

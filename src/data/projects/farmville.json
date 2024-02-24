@@ -1,0 +1,42 @@
+{
+  "title": "FarmVille 2",
+  "slug": "farmville2",
+  "company": "Zynga",
+  "dates": "August 2011 - September 2014",
+  "images" : [
+    {
+      "src": "img/projects/farmville2/farm1.png",
+      "title": "FarmVille 2"
+    },
+    {
+      "src": "img/projects/farmville2/farm2.png",
+      "title": "FarmVille 2"
+    },
+    {
+      "src": "img/projects/farmville2/farm3.png",
+      "title": "FarmVille 2"
+    },
+    {
+      "src": "img/projects/farmville2/farm4.png",
+      "title": "FarmVille 2"
+    },
+    {
+      "src": "img/projects/farmville2/farm5.png",
+      "title": "FarmVille 2"
+    },
+    {
+      "src": "img/projects/farmville2/farm6.png",
+      "title": "FarmVille 2"
+    },
+    {
+      "src": "img/projects/farmville2/farm7.png",
+      "title": "FarmVille 2"
+    }
+  ],
+  "bullets" : [
+    "<a href=\"https://apps.facebook.com/farmville-two\">FarmVille 2</a> launched in September 2012 and became the top game on Facebook, with more than 9 million daily active users",
+    "Mentored developers, estimated development costs for new features, managed developer project allocation as “pod lead” of 4-5 software engineers",
+    "Lead the development of large projects such as the “County Fair” competitive leaderboard feature, and the “first time user experience” tutorial where I created a much-reused scriptable tutorial system. Delivered these challenging multi-month projects on time",
+    "Developed features for FarmVille 2 in ActionScript and PHP"
+  ]
+}

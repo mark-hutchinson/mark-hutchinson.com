@@ -1,0 +1,75 @@
+#about {
+  background-color: #C0F700;
+  color: #291860;
+  min-height:100vh;
+  padding-top: 1vh;
+  padding-bottom: 5vh;
+}
+#about h1 {
+  color: #CB00A4;
+  font-size: 8vw;
+  font-style: oblique;
+  text-shadow: -2px 2px #FF0000;
+}
+#about img {
+  max-width:100%;
+  max-height:100%;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+#about a {
+  color: #9C007E;
+}
+#about a:hover {
+  color: #CB00A4;
+}
+#experience {
+  background-color: #291860;
+  color: #eff7d3;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+#experience a {
+  color: #FFF336;
+}
+#experience a:hover {
+  color: #C0F700;
+}
+#experience h2{
+  color: #eff7d3;
+  font-style: oblique;
+  text-shadow: -2px 2px #7B0064;
+  padding-top: 5vh;
+}
+#experience h3{
+  color: #eff7d3;
+}
+
+#contact {
+  background-color: #915EC5;
+  color: #291860;
+  padding-top: 10vh;
+  padding-bottom: 25vh;
+}
+.navbar-light {
+  background-color: #C0F700;
+}
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: #CB00A4;
+  font-style: oblique;
+  text-shadow: -1px 1px #ff0000;
+}
+.navbar-light .nav-link {
+  font-style: oblique;
+  font-size: 2em;
+  color: #7FA400;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #3B0474;
+}
+body {
+  background-color: #291860;
+}

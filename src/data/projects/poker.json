@@ -1,0 +1,34 @@
+{
+  "title": "Zynga Poker",
+  "slug": "zynga-poker",
+  "company": "Zynga",
+  "dates": "February 2016 - May 2022",
+  "images" : [
+    {
+      "src": "img/projects/poker/poker1.png",
+      "title": "Zynga Poker"
+    },
+    {
+      "src": "img/projects/poker/poker2.png",
+      "title": "Zynga Poker"
+    },
+    {
+      "src": "img/projects/poker/poker3.png",
+      "title": "Zynga Poker"
+    },
+    {
+      "src": "img/projects/poker/poker4.png",
+      "title": "Zynga Poker"
+    },
+    {
+      "src": "img/projects/poker/poker5.png",
+      "title": "Zynga Poker"
+    }
+  ],
+  "bullets" : [
+    "Zynga Poker is the world's most popular online Poker Game. Available on <a href=\"https://apps.facebook.com/texas_holdem\">Facebook</a>, iOS, Android and Kindle.",
+    "Technical Lead managing a team of 4-5 developers",
+    "Replaced Flash web Game with Unity WebGL game in 2018",
+    "Delivered many features using Unity/Flash/PHP including: Challenges, Leagues weekly Leaderboard, Lucky Bonus Slot Machine, VIP Center, and XP Progression"
+  ]
+}

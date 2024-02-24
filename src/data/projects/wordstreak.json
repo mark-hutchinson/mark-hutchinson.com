@@ -1,0 +1,46 @@
+{
+  "title": "Scramble With Friends / Word Streak With Friends",
+  "slug":  "scramble-with-friends",
+  "company": "Zynga",
+  "dates": "September 2014 - February 2016",
+  "images" : [
+    {
+      "src": "img/projects/wordstreak/wordstreak1.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak2.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak3.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak4.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak5.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak6.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak7.png",
+      "title": "Word Streak With Friends"
+    },
+    {
+      "src": "img/projects/wordstreak/wordstreak8.png",
+      "title": "Word Streak With Friends"
+    }
+  ],
+  "imageFormat" : "portrait",
+  "bullets" : [
+    "Scramble with Friends is a word game available on iOS and Android",
+    "Worked on rebranding the iOS game to Word Streak with Friends",
+    "Redid every screen in the game using Objective-C & Interface Builder and game board in Cocos2D"
+  ]
+}
