@@ -29,7 +29,7 @@ export function Project({data, layoutType}) {
   const getCarousel = () => {
     return (
       <div className={"col-sm-" + imageColumns}>
-        <Carousel prevLabel="" nextLabel="" controls={images.length > 1} indicators={images.length > 1}>
+        <Carousel prevLabel="" nextLabel="" controls={images.length > 1} indicators={false} slide={false} fade={true}>
           {images.map((image, index) => (
             <Carousel.Item key={slug + "_img_" + index}>
               <img src={image.src} className="d-block w-100" alt={image.title}/>

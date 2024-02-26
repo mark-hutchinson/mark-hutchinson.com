@@ -1,0 +1,16 @@
+{
+  "title": "Limit Break",
+  "slug": "limit-break",
+  "company": "Limit Break",
+  "dates": "May 2022 - Present",
+  "images" : [
+    {
+      "src": "img/projects/limitbreak/limitbreak1.png",
+      "title": "Limit Break"
+    }
+  ],
+  "bullets" : [
+    "In 2022 I joined <a href=\"https://limitbreak.com/\">Limit Break</a> as a Senior Software Engineer.",
+    "We are working on some cool stuff. <a href=\"https://venturebeat.com/games/gabe-leydons-limit-break-has-200m-to-make-a-new-kind-of-blockchain-game/\">VentureBeat Article</a>"
+  ]
+}

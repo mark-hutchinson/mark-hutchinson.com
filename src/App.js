@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import projectLimitBreak from './data/projects/limitbreak.json'
 import projectPoker from './data/projects/poker.json'
 import projectWordstreak from './data/projects/wordstreak.json'
 import projectFarmville from './data/projects/farmville.json'
@@ -19,6 +20,7 @@ function App() {
          <About/>
       </Section>
       <Section id="experience">
+        <Project data={projectLimitBreak} layoutType={LayoutTypeImagesRight}/>
         <Project data={projectPoker} layoutType={LayoutTypeImagesLeft}/>
         <Project data={projectWordstreak} layoutType={LayoutTypeImagesRight}/>
         <Project data={projectFarmville} layoutType={LayoutTypeImagesLeft}/>

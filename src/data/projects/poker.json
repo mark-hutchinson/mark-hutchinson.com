@@ -28,7 +28,8 @@
   "bullets" : [
     "Zynga Poker is the world's most popular online Poker Game. Available on <a href=\"https://apps.facebook.com/texas_holdem\">Facebook</a>, iOS, Android and Kindle.",
     "Technical Lead managing a team of 4-5 developers",
+    "Delivered many features using Unity/Flash/PHP including: Challenges, Leagues weekly Leaderboard, Lucky Bonus Slot Machine, VIP Center, and XP Progression",
     "Replaced Flash web Game with Unity WebGL game in 2018",
-    "Delivered many features using Unity/Flash/PHP including: Challenges, Leagues weekly Leaderboard, Lucky Bonus Slot Machine, VIP Center, and XP Progression"
+    "Core member of small team that rewrote legacy PHP backend in Go Microservices in 2019-2021, using the Nakama game server for multiplayer poker logic."
   ]
 }
