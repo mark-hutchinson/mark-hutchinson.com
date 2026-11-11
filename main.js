@@ -45,6 +45,59 @@ const EXPERIENCE = [
   }
 ];
 
+// ---- Lightbox (full-size image viewer) ----
+const lb = document.getElementById('lightbox');
+const lbImg = lb.querySelector('img');
+const lbCounter = lb.querySelector('.lb-counter');
+let lbState = null; // { images, idx, alt, onChange, returnFocus }
+
+function lbShow(n) {
+  const { images } = lbState;
+  lbState.idx = (n + images.length) % images.length;
+  lbImg.src = images[lbState.idx];
+  lbImg.alt = lbState.alt;
+  const multi = images.length > 1;
+  lb.querySelector('.lb-prev').hidden = !multi;
+  lb.querySelector('.lb-next').hidden = !multi;
+  lb.classList.remove('zoomed');
+  lbCounter.textContent = (multi ? (lbState.idx + 1) + ' / ' + images.length + ' · ' : '') + 'tap image to zoom';
+  lbState.onChange(lbState.idx);
+}
+function openLightbox(images, idx, alt, onChange) {
+  lbState = { images, idx, alt, onChange, returnFocus: document.activeElement };
+  lb.hidden = false;
+  document.body.classList.add('lb-open');
+  lbShow(idx);
+  lb.querySelector('.lb-close').focus();
+}
+function closeLightbox() {
+  if (!lbState) return;
+  lb.hidden = true;
+  lb.classList.remove('zoomed');
+  document.body.classList.remove('lb-open');
+  if (lbState.returnFocus) lbState.returnFocus.focus();
+  lbState = null;
+}
+lb.querySelector('.lb-close').addEventListener('click', closeLightbox);
+lb.querySelector('.lb-prev').addEventListener('click', () => lbShow(lbState.idx - 1));
+lb.querySelector('.lb-next').addEventListener('click', () => lbShow(lbState.idx + 1));
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+lbImg.addEventListener('click', () => lb.classList.toggle('zoomed'));
+document.addEventListener('keydown', (e) => {
+  if (!lbState) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') lbShow(lbState.idx - 1);
+  else if (e.key === 'ArrowRight') lbShow(lbState.idx + 1);
+});
+let touchX = null;
+lb.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', (e) => {
+  if (touchX === null || !lbState || lb.classList.contains('zoomed')) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  touchX = null;
+  if (Math.abs(dx) > 40) lbShow(lbState.idx + (dx < 0 ? 1 : -1));
+});
+
 // ---- Render rows + carousels ----
 function renderRows(items, list) {
 items.forEach((exp) => {
@@ -67,6 +120,7 @@ items.forEach((exp) => {
     <div class="media">
       <div class="stage">
         <img alt="${exp.project}">
+        <button class="expand" aria-label="View larger"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M10 2h4v4M6 14H2v-4M14 2 9.5 6.5M2 14l4.5-4.5"/></svg></button>
         ${multi ? '<button class="arrow prev" aria-label="Previous">‹</button><button class="arrow next" aria-label="Next">›</button>' : ''}
       </div>
       <div class="stagebar">
@@ -79,6 +133,10 @@ items.forEach((exp) => {
   const img = row.querySelector('.stage img');
   const dotsEl = row.querySelector('.dots');
   const counter = row.querySelector('.counter');
+
+  const expand = () => openLightbox(exp.images, cur, exp.project, show);
+  img.addEventListener('click', expand);
+  row.querySelector('.expand').addEventListener('click', expand);
 
   if (multi) {
     exp.images.forEach((_, j) => {

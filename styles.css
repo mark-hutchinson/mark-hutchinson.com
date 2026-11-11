@@ -92,7 +92,15 @@ section.block { border-top: 1px solid #1c1f1c; padding: 88px 56px; }
   border: 1px solid #262a26; background: #101310; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.stage img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.stage img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; cursor: zoom-in; }
+.expand {
+  position: absolute; top: 8px; right: 8px;
+  width: 30px; height: 30px; border-radius: 50%; border: 1px solid #2e342e;
+  background: rgba(12,13,12,.78); color: #e8eae8; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);
+}
+.expand svg { width: 14px; height: 14px; }
+.expand:hover, .arrow:hover { border-color: var(--accent); color: var(--accent); }
 .arrow {
   position: absolute; top: 50%; transform: translateY(-50%);
   width: 32px; height: 32px; border-radius: 50%; border: 1px solid #2e342e;
@@ -118,6 +126,35 @@ section.block { border-top: 1px solid #1c1f1c; padding: 88px 56px; }
 }
 .social a:hover { color: var(--accent); border-color: var(--accent); }
 .copyright { margin-top: 80px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5a605a; letter-spacing: .04em; }
+
+/* lightbox */
+.lb {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(8,9,8,.94); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 64px 80px 56px;
+}
+.lb[hidden] { display: none; }
+.lb img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,.6); cursor: zoom-in; }
+/* zoomed: show the image at full resolution and let the viewer pan around it */
+.lb.zoomed { display: block; overflow: auto; padding: 0; }
+.lb.zoomed img { max-width: none; max-height: none; border-radius: 0; cursor: zoom-out; }
+.lb.zoomed .lb-btn, .lb.zoomed .lb-counter { position: fixed; }
+.lb-btn {
+  position: absolute; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid #2e342e; background: rgba(12,13,12,.8); color: #e8eae8;
+  font-size: 22px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.lb-btn:hover { border-color: var(--accent); color: var(--accent); }
+.lb-close { top: 14px; right: 14px; }
+.lb-prev { left: 18px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 18px; top: 50%; transform: translateY(-50%); }
+.lb-counter {
+  position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #7a807a; white-space: nowrap;
+}
+body.lb-open { overflow: hidden; }
 
 /* cupcake easter egg */
 #cupcake {
@@ -146,4 +183,10 @@ section.block { border-top: 1px solid #1c1f1c; padding: 88px 56px; }
   .exprow { grid-template-columns: 1fr; gap: 18px; }
   .media { max-width: 420px; }
   .navlinks { gap: 18px; }
+  /* "HUTCHINSON" is ~7.2em wide; size it to the screen so it never overflows */
+  .hero h1 { font-size: clamp(34px, calc((100vw - 48px) / 7.4), 128px); }
+  .lb { padding: 60px 8px 76px; }
+  .lb-prev, .lb-next { top: auto; bottom: 14px; transform: none; }
+  .lb-prev { left: 14px; } .lb-next { right: 14px; }
+  .lb-counter { bottom: 28px; }
 }
